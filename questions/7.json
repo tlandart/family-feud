@@ -1,0 +1,9 @@
+{
+	"question":"Name a reason to celebrate a party.",
+	"answers":[
+	{"answer": "GRADUATION", "points": 32},
+	{"answer": "WEDDING", "points": 26},
+	{"answer": "HOLIDAY", "points": 20},
+	{"answer": "BAR MITZVAH", "points": 14},
+	{"answer": "BACHELOR/BACHELORETTE", "points": 8}]
+}

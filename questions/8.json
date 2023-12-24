@@ -1,0 +1,9 @@
+{
+	"question":"Name something you might eat with crackers.",
+	"answers":[
+	{"answer": "SOUP", "points": 28},
+	{"answer": "CHEESE", "points": 24},
+	{"answer": "PEANUT BUTTER", "points": 21},
+	{"answer": "CHILI", "points": 16},
+	{"answer": "SLICED MEATS", "points": 11}]
+}

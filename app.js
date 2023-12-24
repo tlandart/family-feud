@@ -1,9 +1,11 @@
 let answers = [];
 let points = [];
+let question = "";
 let teamASelected = true; // which team is playing right now
 let pointsAddedThisRound = 0; // total points awarded to the currently selected team this round
 let strikes = 0; // number of strikes the selected team has this round
 let stealing = false; // whether the other team is stealing right now or not
+let stage = 0; // 0 or less = Face-Off, 1 = Guess, 2 = Steal, 3 or more = Round Over
 let numRevealed = 0; // number of answers revealed this round so far
 
 // https://stackoverflow.com/questions/16505333/get-the-data-of-uploaded-file-in-javascript
@@ -31,10 +33,13 @@ function handleFile() {
     read.readAsText(jsonFile);
     read.onloadend = function() {
         let jsonAnswers = JSON.parse(read.result).answers;
+        let jsonQuestion = JSON.parse(read.result).question;
         for(let i=0;i<jsonAnswers.length;i++) {
             answers[i] = jsonAnswers[i].answer;
             points[i] = parseInt(jsonAnswers[i].points);
         }
+        // change the question label
+        document.getElementById("questionlabel").textContent = jsonQuestion;
         newRound();
     }
 }
@@ -42,7 +47,7 @@ function handleFile() {
 function newRound() {
     pointsAddedThisRound = 0;
     strikes = 0;
-    stealing = false;
+    resetStage();
     numRevealed = 0;
 
     if(teamASelected) teamAselect();
@@ -167,6 +172,24 @@ onkeydown = (e) => {
     }
 }
 
+function resetStage() {
+    stage = 0;
+    strikes = 0;
+    document.getElementById("stagelabel").textContent = "Face-Off";
+}
+
+function advanceStage() {
+    stage++;
+    strikes = 0;
+    let text = "Face-Off";
+    if(stage === 1) text = "Guess";
+    else if(stage === 2) text = "Steal";
+    else if(stage === 3) text = "Round Over";
+    else text = "Error"
+
+    document.getElementById("stagelabel").textContent = text;
+}
+
 // reveal the box graphically (doesn't handle any rules, just straight up reveals it) and whether to play the bell sound or not
 function revealQuestionBox(i, playSound) {
     if(document.getElementById("answer" + i).style.display === "none") {
@@ -192,7 +215,25 @@ function clickBox(i) {
     if(!boxRevealed) { // if the box is revealed nothing happens
         revealQuestionBox(i, true);
         
-        if(stealing) { // remove this round's points from selected team and add them to the other team. also, the round is over
+        if(stage === 0) { // face-off
+            // if it's correct, that team wins face off and they get those points. they get locked in and we start the next stage
+            advanceStage();
+        }
+
+        // this runs too if we ran the above if statement
+        if(stage === 1) { // add points to the selected team
+            let team = teamASelected ? "A" : "B";
+            let toAdd = parseInt(document.getElementById("answerpoints" + i).textContent);
+            pointsAddedThisRound += toAdd;
+            let teamLabel = document.getElementById("team" + team + "points");
+            teamLabel.textContent = parseInt(teamLabel.textContent) + toAdd;
+
+            if(numRevealed >= answers.length) { // if they've revealed everything then we skip to the end of the round (no steal)
+                stage = 2;
+                advanceStage();
+            }
+        }
+        else if(stage === 2) { // remove this round's points from selected team and add them to the other team. also, the round is over
             let team = teamASelected ? "A" : "B";
             let otherTeam = teamASelected ? "B" : "A";
             let teamLabel = document.getElementById("team" + team + "points");
@@ -202,50 +243,55 @@ function clickBox(i) {
             let otherTeamLabel = document.getElementById("team" + otherTeam + "points");
             otherTeamLabel.textContent = parseInt(otherTeamLabel.textContent) + pointsAddedThisRound;
 
-            endRound();
+            advanceStage();
         }
-        else { // add points to the selected team
-            let team = teamASelected ? "A" : "B";
-            let toAdd = parseInt(document.getElementById("answerpoints" + i).textContent);
-            pointsAddedThisRound += toAdd;
-            let teamLabel = document.getElementById("team" + team + "points");
-            teamLabel.textContent = parseInt(teamLabel.textContent) + toAdd;
-        }
+        // if it's stage 3, do nothing (the game is done).
 
         console.log("points added this round: " + pointsAddedThisRound + "\nteam A points: " + document.getElementById("teamApoints").textContent + "\nteam B points: " + document.getElementById("teamBpoints").textContent);
     }
 }
 
-// reveal the box and follow any consequential procedure of the game
-function strike() {
-    strikes++;
-
-    if(strikes > 3) return;
-
-    darkenHighlight();
+function playStrike() { // play the current strike animation graphically (just the animation)
+    let num = strikes;
+    if(num < 1) num = 1;
 
     let buzzer = new Audio('assets/buzzer.mp3');
     buzzer.play();
 
     let strike = document.createElement("div");
-    strike.className = "strike" + strikes;
+    strike.className = "strike" + num;
     document.body.appendChild(strike);
     setTimeout(function() {
         strike.remove();
     }, 1000);
+}
 
-    if(stealing && strikes > 0) { // if the other team is stealing but fails. the round is over and the selected team gets to keep their points from this round
+// reveal the box and follow any consequential procedure of the game
+function strike() {
+
+    if(stage === 0) { // a strike on stage 0 means we select the other team
+        playStrike();
+        if(teamASelected) teamBselect();
+        else teamAselect();
+    }
+    else if(stage === 1) { // on stage 1 we go up to 3 strikes after which we advance to "steal" stage
+        strikes++;
+        playStrike();
+        if(strikes > 2) advanceStage();
+    }
+    else if(stage === 2) { // if the other team is stealing
+        // they fail. the round is over and the selected team gets to keep their points from this round
+        strikes++;
+        playStrike();
         endRound();
     }
-    else if(strikes > 2) { // if the selected team is guessing and gets 3 strikes, the other team can steal
-        stealing = true;
-        strikes = 0;
-    }
+    // if it's stage 3, do nothing (the game is done).
 }
 
 function endRound() {
-    stealing = false;
+    stage = 2;
+    advanceStage();
     strikes = 0;
     pointsAddedThisRound = 0;
-    for(let i=0;i<answers.length;i++) revealQuestionBox(i, false);
+    //for(let i=0;i<answers.length;i++) revealQuestionBox(i, false);
 }

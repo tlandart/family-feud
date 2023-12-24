@@ -1,0 +1,10 @@
+{
+	"question":"Name a professional sport where the players make a lot of money.",
+	"answers":[
+	{"answer": "FOOTBALL", "points": 29},
+	{"answer": "BASEBALL", "points": 27},
+	{"answer": "BASKETBALL", "points": 24},
+	{"answer": "SOCCER", "points": 7},
+	{"answer": "TENNIS", "points": 7},
+	{"answer": "DARTS", "points": 2}]
+}

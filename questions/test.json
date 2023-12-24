@@ -1,0 +1,10 @@
+{
+	"question":"Name a word or phrase that begins with "snow".",
+	"answers":[
+	{"answer": "SNOWFLAKE(S)", "points": 30},
+	{"answer": "SNOWMAN", "points": 26},
+	{"answer": "SNOWBALL", "points": 23},
+	{"answer": "SNOW WHITE", "points": 8},
+	{"answer": "SNOW ANGEL", "points": 3},
+	{"answer": "SNOWFALL", "points": 3}]
+}

@@ -1,0 +1,11 @@
+{
+	"question":"Name a Popular Christmas Carol or Song",
+	"answers":[
+	{"answer": "WE WISH YOU A MERRY CHRISTMAS", "points": 31},
+	{"answer": "JINGLE BELLS", "points": 18},
+	{"answer": "FROSTY THE SNOWMAN", "points": 18},
+	{"answer": "SILENT NIGHT", "points": 10},
+	{"answer": "JOY TO THE WORLD", "points": 8},
+	{"answer": "SANTA CLAUS IS COMING TO TOWN", "points": 7},
+	{"answer": "HOLLY JOLLY CHRISTMAS", "points": 7}]
+}
