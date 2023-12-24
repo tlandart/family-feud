@@ -39,8 +39,8 @@ function handleFile() {
             points[i] = parseInt(jsonAnswers[i].points);
         }
         // change the question label
-        document.getElementById("questionlabel").textContent = jsonQuestion;
-        newRound();
+        //document.getElementById("questionlabel").textContent = jsonQuestion;
+        //newRound();
     }
 }
 
