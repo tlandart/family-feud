@@ -1,10 +1,10 @@
 {
-	"question":"Name a word or phrase that begins with "snow".",
+	"question":"Name a word or phrase that begins with 'snow.'",
 	"answers":[
-	{"answer": "SNOWFLAKE(S)", "points": 30},
-	{"answer": "SNOWMAN", "points": 26},
-	{"answer": "SNOWBALL", "points": 23},
-	{"answer": "SNOW WHITE", "points": 8},
-	{"answer": "SNOW ANGEL", "points": 3},
-	{"answer": "SNOWFALL", "points": 3}]
+	{"num": 1, "answer": "SNOWFLAKE(S)", "points": 30},
+	{"num": 2, "answer": "SNOWMAN", "points": 26},
+	{"num": 3, "answer": "SNOWBALL", "points": 23},
+	{"num": 4, "answer": "SNOW WHITE", "points": 8},
+	{"num": 5, "answer": "SNOW ANGEL", "points": 3},
+	{"num": 6, "answer": "SNOWFALL", "points": 3}]
 }

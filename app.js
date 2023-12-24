@@ -40,7 +40,8 @@ function handleFile() {
         }
         // change the question label
         //document.getElementById("questionlabel").textContent = jsonQuestion;
-        //newRound();
+        
+        newRound();
     }
 }
 
