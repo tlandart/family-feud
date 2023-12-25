@@ -1,8 +1,8 @@
 {
 	"question":"Name an activity that’s easier to do when it’s windy.",
 	"answers":[
-	{"answer": "FLY A KITE", "points": 89},
-	{"answer": "SAIL", "points": 7},
-	{"answer": "SURF", "points": 2},
-	{"answer": "AIR DRY CLOTHES", "points": 2}]
+	{"num": 1, "answer": "FLY A KITE", "points": 89},
+	{"num": 2, "answer": "SAIL", "points": 7},
+	{"num": 3, "answer": "SURF", "points": 2},
+	{"num": 4, "answer": "AIR DRY CLOTHES", "points": 2}]
 }

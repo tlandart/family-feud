@@ -1,10 +1,10 @@
 {
 	"question":"Name an occupation/job that begins with the letter 'J.'",
 	"answers":[
-	{"answer": "JANITOR", "points": 62},
-	{"answer": "JUDGE/JUSTICE", "points": 19},
-	{"answer": "JEWELER", "points": 5},
-	{"answer": "JOCKEY", "points": 4},
-	{"answer": "JOURNALIST", "points": 4},
-	{"answer": "JUGGLER", "points": 3}]
+	{"num": 1, "answer": "JANITOR", "points": 62},
+	{"num": 2, "answer": "JUDGE/JUSTICE", "points": 19},
+	{"num": 3, "answer": "JEWELER", "points": 5},
+	{"num": 4, "answer": "JOCKEY", "points": 4},
+	{"num": 5, "answer": "JOURNALIST", "points": 4},
+	{"num": 6, "answer": "JUGGLER", "points": 3}]
 }

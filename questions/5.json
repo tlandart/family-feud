@@ -1,8 +1,8 @@
 {
 	"question":"Name something people might only do once a week.",
 	"answers":[
-	{"answer": "LAUNDRY", "points": 27},
-	{"answer": "GROCERY SHOP", "points": 25},
-	{"answer": "EXERCISE", "points": 21},
-	{"answer": "GO TO CHURCH", "points": 15}]
+	{"num": 1, "answer": "LAUNDRY", "points": 27},
+	{"num": 2, "answer": "GROCERY SHOP", "points": 25},
+	{"num": 3, "answer": "EXERCISE", "points": 21},
+	{"num": 4, "answer": "GO TO CHURCH", "points": 15}]
 }

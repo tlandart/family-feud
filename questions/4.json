@@ -1,8 +1,8 @@
 {
 	"question":"Name something an athlete might break.",
 	"answers":[
-	{"answer": "BONE/BODY PART", "points": 80},
-	{"answer": "A RECORD", "points": 16},
-	{"answer": "BAT/EQUIPMENT", "points": 2},
-	{"answer": "RULES/THE LAW", "points": 2}]
+	{"num": 1, "answer": "BONE/BODY PART", "points": 80},
+	{"num": 2, "answer": "A RECORD", "points": 16},
+	{"num": 3, "answer": "BAT/EQUIPMENT", "points": 2},
+	{"num": 4, "answer": "RULES/THE LAW", "points": 2}]
 }

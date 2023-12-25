@@ -1,8 +1,8 @@
 {
 	"question":"Name the most popular Christmas characters.",
 	"answers":[
-	{"answer": "THE GRINCH", "points": 65},
-	{"answer": "FROSTY", "points": 20},
-	{"answer": "RUDOLPH", "points": 10},
-	{"answer": "SANTA", "points": 5}]
+	{"num": 1, "answer": "THE GRINCH", "points": 65},
+	{"num": 2, "answer": "FROSTY", "points": 20},
+	{"num": 3, "answer": "RUDOLPH", "points": 10},
+	{"num": 3, "answer": "SANTA", "points": 5}]
 }

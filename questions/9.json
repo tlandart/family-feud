@@ -1,8 +1,8 @@
 {
 	"question":"Name an animal that starts with the letter 'E.'",
 	"answers":[
-	{"answer": "ELEPHANT", "points": 85},
-	{"answer": "EAGLE", "points": 7},
-	{"answer": "EEL", "points": 3},
-	{"answer": "EMU", "points": 3}]
+	{"num": 1, "answer": "ELEPHANT", "points": 85},
+	{"num": 2, "answer": "EAGLE", "points": 7},
+	{"num": 3, "answer": "EEL", "points": 3},
+	{"num": 4, "answer": "EMU", "points": 3}]
 }

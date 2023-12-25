@@ -1,12 +1,12 @@
 {
 	"question":"Name something that is an example such as and so on.",
 	"answers":[
-	{"answer": "answer number one", "points": 55},
-	{"answer": "answer number two", "points": 25},
-	{"answer": "answer number three", "points": 14},
-	{"answer": "answer number four", "points": 10},
-	{"answer": "answer number five", "points": 6},
-	{"answer": "answer number six", "points": 4},
-	{"answer": "answer number seven", "points": 2},
-	{"answer": "answer number eight", "points": 1}]
+	{"num": 1, "answer": "answer number one", "points": 55},
+	{"num": 2, "answer": "answer number two", "points": 25},
+	{"num": 3, "answer": "answer number three", "points": 14},
+	{"num": 4, "answer": "answer number four", "points": 10},
+	{"num": 5, "answer": "answer number five", "points": 6},
+	{"num": 6, "answer": "answer number six", "points": 4},
+	{"num": 7, "answer": "answer number seven", "points": 2},
+	{"num": 8, "answer": "answer number eight", "points": 1}]
 }

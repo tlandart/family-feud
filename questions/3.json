@@ -1,8 +1,8 @@
 {
 	"question":"Name the most useful body part that begins with the letter 'L.'",
 	"answers":[
-	{"answer": "LEGS", "points": 77},
-	{"answer": "LIPS", "points": 12},
-	{"answer": "LIVER", "points": 4},
-	{"answer": "LUNGS", "points": 6}]
+	{"num": 1, "answer": "LEGS", "points": 77},
+	{"num": 2, "answer": "LIPS", "points": 12},
+	{"num": 3, "answer": "LIVER", "points": 4},
+	{"num": 4, "answer": "LUNGS", "points": 6}]
 }
