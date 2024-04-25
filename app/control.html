@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FF Control Panel</title>
+    <link rel="stylesheet" href="controlstyle.css" />
+    <link rel="icon" type="image/png" href="../assets/ff.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <div class="panel">
+    <div class="panelcontrol">
+      <div class="paneltitle">Control</div>
+      <button onclick="openGame()">Open Game</button>
+      <button onclick="updateDisplay(gameState)">Refresh Display</button>
+      <div class="paneldivider"></div>
+
+      <div class="paneltitle">Load File</div>
+      <input type="file" id="controlfile" />
+      <div class="paneldivider"></div>
+
+      <div>
+        <div class="controlname">
+          <div class="paneltitle">Rename Team A</div>
+          <input
+            id="controlnameA"
+            oninput="handleNameChange(true)"
+            autocomplete="off"
+            placeholder="Team A"
+            maxlength="33"
+          />
+        </div>
+        <div class="controlname">
+          <div class="paneltitle">Rename Team B</div>
+          <input
+            id="controlnameB"
+            oninput="handleNameChange(false)"
+            autocomplete="off"
+            placeholder="Team B"
+            maxlength="33"
+          />
+        </div>
+      </div>
+      <div class="paneldivider"></div>
+
+      <div id="controldecidewrap">
+        <div class="paneltitle">Decide</div>
+        <div id="controldecide">
+          <button id="controlDecidePlay" onclick="handleDecide(true)">
+            Play
+          </button>
+          <button id="controlDecidePass" onclick="handleDecide(false)">
+            Pass
+          </button>
+        </div>
+        <div class="paneldivider"></div>
+      </div>
+
+      <div id="controlbuzzwrap">
+        <div class="paneltitle">Buzz In</div>
+        <div id="controlbuzz">
+          <button id="controlbuzzA" onclick="handleBuzz(true)">
+            Team A buzz in
+          </button>
+          <button id="controlbuzzB" onclick="handleBuzz(false)">
+            Team B buzz in
+          </button>
+        </div>
+        <div class="paneldivider"></div>
+      </div>
+
+      <div id="controlstrikeswrap">
+        <div class="paneltitle">Strike</div>
+        <div id="controlstrikes">
+          <button onclick="handleStrike()">Add strike</button>
+        </div>
+        <div class="paneldivider"></div>
+      </div>
+
+      <div id="controlanswerswrap">
+        <div class="paneltitle">Reveal Answers</div>
+        <div id="controlanswers"></div>
+        <div class="paneldivider"></div>
+      </div>
+    </div>
+    <div class="paneldisplay">
+      <div class="paneltitle">Display (preview)</div>
+      <div class="paneldivider"></div>
+
+      <div class="paneltitle" id="displaystage">Loading</div>
+      <div class="paneltext" id="displaycaption">Game has not started yet.</div>
+      <div class="paneldivider"></div>
+
+      <div class="paneltitle">Points This Round</div>
+      <div class="paneltext" id="displaypointsround">0</div>
+      <div class="paneldivider"></div>
+
+      <div class="paneltitle" id="displaypointstitleA">Team A</div>
+      <div class="paneltext" id="displaypointsA">0</div>
+      <div class="paneldivider"></div>
+
+      <div class="paneltitle" id="displaypointstitleB">Team B</div>
+      <div class="paneltext" id="displaypointsB">0</div>
+      <div class="paneldivider"></div>
+
+      <div class="paneltitle">Strikes</div>
+      <div class="paneltext" id="displaystrikes">0</div>
+      <div class="paneldivider"></div>
+
+      <div class="paneltitle">Question</div>
+      <div class="paneltext" id="displayquestion">N/A</div>
+      <div class="paneldivider"></div>
+
+      <div class="paneltitle">Answers</div>
+      <div id="displayanswers"></div>
+      <div class="paneldivider"></div>
+    </div>
+  </div>
+
+  <script src="control.js"></script>
+</html>

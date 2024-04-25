@@ -1,0 +1,94 @@
+body {
+  box-sizing: border-box;
+  background-color: black;
+}
+
+.panel {
+  display: flex;
+  justify-content: center;
+}
+
+.panelcontrol {
+  background-color: lightgreen;
+  width: 50%;
+  max-width: 500px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid dimgray;
+  border-top: 2px solid dimgray;
+  border-bottom: 2px solid dimgray;
+}
+
+.paneldisplay {
+  background-color: lightblue;
+  width: 50%;
+  max-width: 500px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid dimgray;
+  border-top: 2px solid dimgray;
+  border-bottom: 2px solid dimgray;
+}
+
+.paneldivider {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 1px;
+  background-color: black;
+  opacity: 0.25;
+}
+
+.paneltitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.paneltext {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  margin-left: auto;
+  width: 100%;
+}
+
+.paneltextshown {
+  font-weight: 500;
+}
+
+.paneltexthidden {
+  opacity: 0.6;
+}
+
+#controlanswers {
+  display: flex;
+  flex-direction: column;
+}
+
+#controlbuzz,
+#controldecide {
+  display: flex;
+}
+
+#controlbuzz button,
+#controldecide button {
+  height: 50px;
+  width: 50%;
+}
+
+#controlstrikes button {
+  height: 35px;
+  width: 100%;
+}
+
+.controlname input {
+  resize: none;
+  width: 98%;
+  height: 15px;
+  padding: 0;
+}
