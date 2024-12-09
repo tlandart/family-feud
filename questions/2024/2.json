@@ -1,0 +1,29 @@
+{
+  "question": "Name something you shouldn’t be holding while you’re driving.",
+  "answers": [
+    {
+      "answer": "Phone",
+      "points": 59
+    },
+    {
+      "answer": "Food or drink",
+      "points": 12
+    },
+    {
+      "answer": "Alcoholic beverage",
+      "points": 12
+    },
+    {
+      "answer": "Crying baby",
+      "points": 11
+    },
+    {
+      "answer": "Cigarette",
+      "points": 2
+    },
+    {
+      "answer": "Murder weapon",
+      "points": 2
+    }
+  ]
+}

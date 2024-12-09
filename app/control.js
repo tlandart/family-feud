@@ -16,6 +16,7 @@ Game state format:
 - Teams: String array of names
 - Team selected: Bool
 - Points collected: 0, ... (show family feud logo if it's 0)
+- Multiplier: 1x, 2x, 3x
 - Team 1 points: 0, ...
 - Team 2 points: 0, ...
 - Caption: String that describes the current game state
@@ -28,12 +29,18 @@ let gameState = {
   teams: { a: "Team A", b: "Team B" },
   teamASelected: true,
   pointsRound: 0,
+  multiplier: 1,
   pointsA: 0,
   pointsB: 0,
   caption: "Loading...",
 };
 
 let gameWindow;
+
+/* Helper function that gets the currently selected team's name. */
+function getSelTeamName() {
+  return gameState.teamASelected ? gameState.teams.a : gameState.teams.b;
+}
 
 /* Game handling function. Reset the game state to the default. Retains team scores. */
 function handleReset() {
@@ -43,6 +50,7 @@ function handleReset() {
   gameState.answers = [];
   gameState.teamASelected = true;
   gameState.pointsRound = 0;
+  gameState.multiplier = 1;
   gameState.caption = `Waiting for team ${gameState.teams.a} or ${gameState.teams.b} to buzz in.`;
   updateDisplay(gameState);
 }
@@ -62,13 +70,10 @@ function handleBuzz(team) {
 /* Game handling function. The selected team plays if PLAY = true. */
 function handleDecide(play) {
   if (!play) gameState.teamASelected = !gameState.teamASelected;
-  let teamName = gameState.teamASelected
-    ? gameState.teams.a
-    : gameState.teams.b;
-  console.log(teamName + " playing.");
+  console.log(getSelTeamName() + " playing.");
 
   gameState.stage = "Guess";
-  gameState.caption = teamName + " is guessing.";
+  gameState.caption = getSelTeamName() + " is guessing.";
 
   updateDisplay(gameState);
 }
@@ -79,24 +84,25 @@ function handleReveal(i) {
     console.error("handleReveal(" + i + ")");
   }
 
-  let teamName = gameState.teamASelected
-    ? gameState.teams.a
-    : gameState.teams.b;
-  console.log(teamName + " revealing " + i);
+  console.log(getSelTeamName() + " revealing " + i);
 
   gameState.answers[i].revealed = true;
   playBell();
 
   if (gameState.stage != "Round Over")
-    gameState.pointsRound += gameState.answers[i].points;
+    gameState.pointsRound += gameState.multiplier * gameState.answers[i].points;
 
   if (gameState.stage === "Faceoff") {
-    gameState.stage = "Faceoff (Steal)";
-    gameState.teamASelected = !gameState.teamASelected;
-    let newTeamName = gameState.teamASelected
-      ? gameState.teams.a
-      : gameState.teams.b;
-    gameState.caption = newTeamName + " is trying to steal the faceoff.";
+    if (i === 0) {
+      /* Opponent's can't steal if the top answer was guessed. Jump right to the "decide" stage. */
+      gameState.caption = getSelTeamName() + " is deciding to pass or play.";
+      gameState.stage = "Faceoff (Decide)";
+    } else {
+      /* Otherwise, let them steal. */
+      gameState.stage = "Faceoff (Steal)";
+      gameState.teamASelected = !gameState.teamASelected;
+      gameState.caption = getSelTeamName() + " is trying to steal the faceoff.";
+    }
   } else if (gameState.stage === "Faceoff (Steal)") {
     /* Find the revealed answer (should only be one at this point: the last revealed answer). */
     let revealed = -1;
@@ -114,14 +120,8 @@ function handleReveal(i) {
     if (i > revealed) {
       /* Below. The other team will decide to pass or play. */
       gameState.teamASelected = !gameState.teamASelected;
-      let newTeamName = gameState.teamASelected
-        ? gameState.teams.a
-        : gameState.teams.b;
-      gameState.caption = newTeamName + " is deciding to pass or play.";
-    } else {
-      /* Above. This team will decide to pass or play. */
-      gameState.caption = teamName + " is deciding to pass or play.";
     }
+    gameState.caption = getSelTeamName() + " is deciding to pass or play.";
     gameState.stage = "Faceoff (Decide)";
   } else if (gameState.stage === "Guess") {
     /* Count number of revealed answers. */
@@ -133,7 +133,7 @@ function handleReveal(i) {
     if (revealedCount === gameState.answers.length) {
       /* Current team wins. */
       gameState.stage = "Round Over";
-      gameState.caption = teamName + " wins the round!";
+      gameState.caption = getSelTeamName() + " wins the round!";
 
       /* Add points. */
       if (gameState.teamASelected) gameState.pointsA += gameState.pointsRound;
@@ -143,7 +143,7 @@ function handleReveal(i) {
   } else if (gameState.stage === "Steal") {
     /* Current team wins. */
     gameState.stage = "Round Over";
-    gameState.caption = teamName + " wins the round!";
+    gameState.caption = getSelTeamName() + " wins the round!";
 
     /* Add points. */
     if (gameState.teamASelected) gameState.pointsA += gameState.pointsRound;
@@ -159,20 +159,14 @@ function handleReveal(i) {
 /* Game handling function. Reveals answer i and updates the game state as needed. */
 function handleStrike() {
   console.log("strike #" + gameState.strikes);
-  playStrike();
+  playStrike(gameState);
 
   if (gameState.stage === "Faceoff") {
     gameState.teamASelected = !gameState.teamASelected;
-    let newTeamName = gameState.teamASelected
-      ? gameState.teams.a
-      : gameState.teams.b;
-    gameState.caption = newTeamName + " is guessing the faceoff.";
+    gameState.caption = getSelTeamName() + " is guessing the faceoff.";
   } else if (gameState.stage === "Faceoff (Steal)") {
     gameState.teamASelected = !gameState.teamASelected;
-    let newTeamName = gameState.teamASelected
-      ? gameState.teams.a
-      : gameState.teams.b;
-    gameState.caption = newTeamName + " is deciding to pass or play.";
+    gameState.caption = getSelTeamName() + " is deciding to pass or play.";
     gameState.stage = "Faceoff (Decide)";
   } else if (gameState.stage === "Guess") {
     gameState.strikes++;
@@ -181,19 +175,13 @@ function handleStrike() {
       gameState.stage = "Steal";
       gameState.strikes = 0;
       gameState.teamASelected = !gameState.teamASelected;
-      let newTeamName = gameState.teamASelected
-        ? gameState.teams.a
-        : gameState.teams.b;
-      gameState.caption = newTeamName + " is trying to steal the round.";
+      gameState.caption = getSelTeamName() + " is trying to steal the round.";
     }
   } else if (gameState.stage === "Steal") {
     /* Current team wins. */
     gameState.stage = "Round Over";
     gameState.teamASelected = !gameState.teamASelected;
-    let newTeamName = gameState.teamASelected
-      ? gameState.teams.a
-      : gameState.teams.b;
-    gameState.caption = newTeamName + " wins the round!";
+    gameState.caption = getSelTeamName() + " wins the round!";
 
     /* Add points. */
     if (gameState.teamASelected) gameState.pointsA += gameState.pointsRound;
@@ -221,6 +209,12 @@ function handleNameChange(team) {
   updateDisplay(gameState);
 }
 
+function handleMultiplierChange() {
+  let multElem = document.getElementById("controlmultiplier");
+  gameState.multiplier = multElem.value;
+  updateDisplay(gameState);
+}
+
 document
   .getElementById("controlfile")
   .addEventListener("change", handleFile, false);
@@ -243,7 +237,7 @@ function handleFile() {
     let jsonQuestion = JSON.parse(read.result).question;
     for (let i = 0; i < jsonAnswers.length; i++) {
       gameState.answers.push({
-        content: jsonAnswers[i].answer,
+        content: jsonAnswers[i].answer.toUpperCase(),
         points: parseInt(jsonAnswers[i].points),
         revealed: false,
       });
@@ -259,18 +253,18 @@ Frontend interaction stuff.
 
 */
 
-function updateGameDisplay() {
+function updateGameDisplay(state) {
   if (!gameWindow) return;
 
   /* "false" is read as "update the display, don't play a strike". */
-  gameWindow.postMessage([gameState, false], "*");
+  gameWindow.postMessage([state, false], "*");
 }
 
 /* Play the current strike animation graphically (just the animation). */
-function playStrike() {
+function playStrike(state) {
   if (!gameWindow) return;
   /* "true" is read as "play a strike, don't update the display". */
-  gameWindow.postMessage([gameState, true], "*");
+  gameWindow.postMessage([state, true], "*");
 }
 
 function playBell() {
@@ -280,9 +274,13 @@ function playBell() {
 
 function openGame() {
   gameWindow = open("game.html");
+  /* Let the window's js script run before sending anything. */
+  gameWindow.addEventListener("load", (e) => {
+    updateDisplay(gameState);
+  });
 }
 
-/* Update display on control panel. */
+/* Update display on control panel and game window (if there is one). */
 function updateDisplay(state) {
   let answerDisplay = document.getElementById("displayanswers");
   let answerControl = document.getElementById("controlanswers");
@@ -341,6 +339,7 @@ function updateDisplay(state) {
 
   document.getElementById("displayquestion").textContent = state.question;
   document.getElementById("displaypointsround").textContent = state.pointsRound;
+  document.getElementById("displaymultiplier").textContent = state.multiplier;
   document.getElementById("displaypointstitleA").textContent = state.teams.a;
   document.getElementById("displaypointstitleB").textContent = state.teams.b;
   document.getElementById("displaypointsA").textContent = state.pointsA;
@@ -349,5 +348,5 @@ function updateDisplay(state) {
   document.getElementById("displaystage").textContent = state.stage;
   document.getElementById("displaycaption").textContent = state.caption;
 
-  if (gameWindow) updateGameDisplay();
+  if (gameWindow) updateGameDisplay(state);
 }

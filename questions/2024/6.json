@@ -1,0 +1,21 @@
+{
+  "question": "What is a common item people forget to take with them when leaving the house?",
+  "answers": [
+    {
+      "answer": "Keys",
+      "points": 50
+    },
+    {
+      "answer": "Phone",
+      "points": 25
+    },
+    {
+      "answer": "Wallet",
+      "points": 15
+    },
+    {
+      "answer": "Sunglasses",
+      "points": 10
+    }
+  ]
+}

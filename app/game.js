@@ -18,6 +18,8 @@ function updateGameDisplay(gameState) {
   doc.getElementById("teamBpoints").textContent = gameState.pointsB;
   doc.getElementById("stagelabel").textContent = gameState.stage;
   doc.getElementById("captionlabel").textContent = gameState.caption;
+  doc.getElementById("multiplierlabel").textContent =
+    "Multiplier: x" + gameState.multiplier;
 
   /* Delete old answer boxes. */
   doc.getElementById("answercol0").innerHTML = "";
@@ -84,5 +86,6 @@ function playStrike(strikes) {
 window.addEventListener("message", (event) => {
   /* If the message indicates, we should play a strike. */
   if (event.data[1]) playStrike(event.data[0].strikes);
-  else updateGameDisplay(event.data[0]);
+  /* Otherwise, just update the display. */ else
+    updateGameDisplay(event.data[0]);
 });

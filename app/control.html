@@ -39,8 +39,26 @@
             maxlength="33"
           />
         </div>
+        <div class="paneldivider"></div>
       </div>
-      <div class="paneldivider"></div>
+
+      <div>
+        <div class="paneltitle">Change Multiplier</div>
+        <div class="controlmultiplier">
+          <input
+            type="range"
+            value="1"
+            min="1"
+            max="3"
+            id="controlmultiplier"
+            oninput="handleMultiplierChange()"
+            autocomplete="off"
+            placeholder="Team B"
+            maxlength="33"
+          />
+        </div>
+        <div class="paneldivider"></div>
+      </div>
 
       <div id="controldecidewrap">
         <div class="paneltitle">Decide</div>
@@ -92,6 +110,10 @@
 
       <div class="paneltitle">Points This Round</div>
       <div class="paneltext" id="displaypointsround">0</div>
+      <div class="paneldivider"></div>
+
+      <div class="paneltitle">Multiplier</div>
+      <div class="paneltext" id="displaymultiplier">1</div>
       <div class="paneldivider"></div>
 
       <div class="paneltitle" id="displaypointstitleA">Team A</div>

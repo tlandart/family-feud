@@ -1,0 +1,21 @@
+{
+  "question": "Name a food that is commonly deep-fried.",
+  "answers": [
+    {
+      "answer": "Chicken",
+      "points": 61
+    },
+    {
+      "answer": "Potatoes/fries",
+      "points": 23
+    },
+    {
+      "answer": "Seafood",
+      "points": 11
+    },
+    {
+      "answer": "Eggplant",
+      "points": 2
+    }
+  ]
+}

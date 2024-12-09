@@ -1,0 +1,29 @@
+{
+  "question": "Name something that might be brewing.",
+  "answers": [
+    {
+      "answer": "Coffee",
+      "points": 37
+    },
+    {
+      "answer": "Beer",
+      "points": 28
+    },
+    {
+      "answer": "Tea",
+      "points": 17
+    },
+    {
+      "answer": "Trouble",
+      "points": 8
+    },
+    {
+      "answer": "A Storm",
+      "points": 5
+    },
+    {
+      "answer": "A Plot",
+      "points": 3
+    }
+  ]
+}

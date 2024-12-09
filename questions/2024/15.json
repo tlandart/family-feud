@@ -1,0 +1,25 @@
+{
+  "question": "Name qualities of a bad boss.",
+  "answers": [
+    {
+      "answer": "Micromanager",
+      "points": 29
+    },
+    {
+      "answer": "Incompetent",
+      "points": 24
+    },
+    {
+      "answer": "Angry",
+      "points": 20
+    },
+    {
+      "answer": "Irresponsible",
+      "points": 14
+    },
+    {
+      "answer": "Oblivious",
+      "points": 13
+    }
+  ]
+}

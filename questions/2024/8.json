@@ -1,0 +1,21 @@
+{
+  "question": "What is a popular pizza topping?",
+  "answers": [
+    {
+      "answer": "Pepperoni",
+      "points": 50
+    },
+    {
+      "answer": "Mushrooms",
+      "points": 20
+    },
+    {
+      "answer": "Sausage",
+      "points": 15
+    },
+    {
+      "answer": "Green peppers",
+      "points": 15
+    }
+  ]
+}
