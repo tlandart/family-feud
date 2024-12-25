@@ -1,0 +1,21 @@
+{
+  "question": "Name something people do when they are bored.",
+  "answers": [
+    {
+      "answer": "Watch TV",
+      "points": 40
+    },
+    {
+      "answer": "Play video games",
+      "points": 30
+    },
+    {
+      "answer": "Read a book",
+      "points": 15
+    },
+    {
+      "answer": "Take a nap",
+      "points": 15
+    }
+  ]
+}

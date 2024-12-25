@@ -1,0 +1,21 @@
+{
+  "question": "What is a common fear that many people have?",
+  "answers": [
+    {
+      "answer": "Heights",
+      "points": 50
+    },
+    {
+      "answer": "Spiders",
+      "points": 25
+    },
+    {
+      "answer": "Public speaking",
+      "points": 15
+    },
+    {
+      "answer": "Flying",
+      "points": 10
+    }
+  ]
+}

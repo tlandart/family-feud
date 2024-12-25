@@ -92,3 +92,23 @@ body {
   height: 15px;
   padding: 0;
 }
+
+.controlmultiplier {
+  display: flex;
+  justify-content: center;
+}
+
+.controlmultiplier input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 75%;
+}
+
+.controlmultiplier input::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  background: lightgreen;
+  border: 2px solid grey;
+  height: 20px;
+  width: 33%;
+}

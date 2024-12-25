@@ -1,0 +1,29 @@
+{
+  "question": "Other than feet, name something that runs.",
+  "answers": [
+    {
+      "answer": "Water/Toilet",
+      "points": 37
+    },
+    {
+      "answer": "Engine/Car",
+      "points": 24
+    },
+    {
+      "answer": "Refrigerator",
+      "points": 10
+    },
+    {
+      "answer": "Nose",
+      "points": 8
+    },
+    {
+      "answer": "Pantyhose",
+      "points": 8
+    },
+    {
+      "answer": "Clock",
+      "points": 3
+    }
+  ]
+}

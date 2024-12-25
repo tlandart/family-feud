@@ -1,0 +1,29 @@
+{
+  "question": "Name something you might see a commercial for during a baseball game.",
+  "answers": [
+    {
+      "answer": "Car/Truck",
+      "points": 28
+    },
+    {
+      "answer": "Baseball Equipment/Jerseys",
+      "points": 26
+    },
+    {
+      "answer": "Baseball Games/Tickets",
+      "points": 25
+    },
+    {
+      "answer": "Restaurants",
+      "points": 9
+    },
+    {
+      "answer": "Medication",
+      "points": 6
+    },
+    {
+      "answer": "Beer",
+      "points": 4
+    }
+  ]
+}

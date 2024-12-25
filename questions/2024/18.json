@@ -1,0 +1,25 @@
+{
+  "question": "Name things you would post on social media.",
+  "answers": [
+    {
+      "answer": "Selfie",
+      "points": 31
+    },
+    {
+      "answer": "Vacation pictures",
+      "points": 24
+    },
+    {
+      "answer": "Pictures of friends",
+      "points": 19
+    },
+    {
+      "answer": "Your meal",
+      "points": 15
+    },
+    {
+      "answer": "Your coffee",
+      "points": 11
+    }
+  ]
+}

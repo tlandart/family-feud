@@ -1,0 +1,21 @@
+{
+  "question": "Name a household chore that nobody likes to do.",
+  "answers": [
+    {
+      "answer": "Cleaning the bathroom",
+      "points": 45
+    },
+    {
+      "answer": "Washing dishes",
+      "points": 25
+    },
+    {
+      "answer": "Vacuuming",
+      "points": 20
+    },
+    {
+      "answer": "Doing laundry",
+      "points": 10
+    }
+  ]
+}
