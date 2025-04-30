@@ -20,7 +20,7 @@
 
       <div>
         <div class="controlname">
-          <div class="paneltitle">Rename Team A</div>
+          <div class="paneltitle">Team A Controls</div>
           <input
             id="controlnameA"
             oninput="handleNameChange(true)"
@@ -28,9 +28,23 @@
             placeholder="Team A"
             maxlength="33"
           />
+          <div class="controlpointswrapper">
+            <button class="controlpoints" onclick="handleManuallyAddPoints(true, 10)">
+              +10
+            </button>
+            <button class="controlpoints" onclick="handleManuallyAddPoints(true, 1)">
+              +1
+            </button>
+            <button class="controlpoints" onclick="handleManuallyAddPoints(true, -1)">
+              -1
+            </button>
+            <button class="controlpoints" onclick="handleManuallyAddPoints(true, -10)">
+              -10
+            </button>
+          </div>
         </div>
         <div class="controlname">
-          <div class="paneltitle">Rename Team B</div>
+          <div class="paneltitle">Team B Controls</div>
           <input
             id="controlnameB"
             oninput="handleNameChange(false)"
@@ -38,6 +52,20 @@
             placeholder="Team B"
             maxlength="33"
           />
+          <div class="controlpointswrapper">
+            <button class="controlpoints" onclick="handleManuallyAddPoints(false, 10)">
+              +10
+            </button>
+            <button class="controlpoints" onclick="handleManuallyAddPoints(false, 1)">
+              +1
+            </button>
+            <button class="controlpoints" onclick="handleManuallyAddPoints(false, -1)">
+              -1
+            </button>
+            <button class="controlpoints" onclick="handleManuallyAddPoints(false, -10)">
+              -10
+            </button>
+          </div>
         </div>
         <div class="paneldivider"></div>
       </div>

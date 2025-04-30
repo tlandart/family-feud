@@ -209,6 +209,15 @@ function handleNameChange(team) {
   updateDisplay(gameState);
 }
 
+function handleManuallyAddPoints(team, num) {
+  if (team)
+    gameState.pointsA += num
+  else
+    gameState.pointsB += num
+
+  updateDisplay(gameState);
+}
+
 function handleMultiplierChange() {
   let multElem = document.getElementById("controlmultiplier");
   gameState.multiplier = multElem.value;

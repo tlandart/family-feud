@@ -93,6 +93,16 @@ body {
   padding: 0;
 }
 
+.controlpointswrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.controlpoints {
+  width: 24%;
+}
+
 .controlmultiplier {
   display: flex;
   justify-content: center;
