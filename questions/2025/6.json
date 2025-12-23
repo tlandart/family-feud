@@ -1,0 +1,10 @@
+{
+  "question": "Name one thing you need to wrap a present",
+  "answers": [
+    { "num": 1, "answer": "Tape", "points": 48 },
+    { "num": 2, "answer": "Wrapping paper", "points": 40 },
+    { "num": 3, "answer": "Scissors", "points": 4 },
+    { "num": 4, "answer": "Bows", "points": 3 },
+    { "num": 5, "answer": "Gift/Present", "points": 3 }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "question": "Name something you might find at the north pole",
+  "answers": [
+    { "num": 1, "answer": "Elf/Elves", "points": 34 },
+    { "num": 2, "answer": "Santa", "points": 26 },
+    { "num": 3, "answer": "Snow", "points": 17 },
+    { "num": 4, "answer": "Reindeer", "points": 13 },
+    { "num": 5, "answer": "Presents/Toys", "points": 3 }
+  ]
+}

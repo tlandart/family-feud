@@ -1,0 +1,10 @@
+{
+  "question": "Name a Christmas song",
+  "answers": [
+    { "num": 1, "answer": "Rudolph", "points": 33 },
+    { "num": 2, "answer": "Jingle Bells", "points": 29 },
+    { "num": 3, "answer": "Silent Night", "points": 20 },
+    { "num": 4, "answer": "Santa Clause is Coming to Town", "points": 11 },
+    { "num": 5, "answer": "White Christmas", "points": 9 }
+  ]
+}

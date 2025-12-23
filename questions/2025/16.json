@@ -1,0 +1,11 @@
+{
+  "question": "Name something people deliver for a living",
+  "answers": [
+    { "num": 1, "answer": "Mail", "points": 33 },
+    { "num": 2, "answer": "Newspapers", "points": 28 },
+    { "num": 3, "answer": "Pizza", "points": 20 },
+    { "num": 4, "answer": "Flowers", "points": 6 },
+    { "num": 5, "answer": "Packages", "points": 3 },
+    { "num": 6, "answer": "Babies", "points": 2 }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "question": "Name something you see at a breakfast buffet",
+  "answers": [
+    { "num": 1, "answer": "Eggs", "points": 25 },
+    { "num": 2, "answer": "Bacon", "points": 24 },
+    { "num": 3, "answer": "Sausage", "points": 19 },
+    { "num": 4, "answer": "Potatoes/Hash Browns", "points": 12 },
+    { "num": 5, "answer": "Juice", "points": 7 }
+  ]
+}

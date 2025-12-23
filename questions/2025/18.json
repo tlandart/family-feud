@@ -1,0 +1,9 @@
+{
+  "question": "Name a musical instrument you strum",
+  "answers": [
+    { "num": 1, "answer": "Guitar", "points": 69 },
+    { "num": 2, "answer": "Banjo", "points": 21 },
+    { "num": 3, "answer": "Ukulele", "points": 4 },
+    { "num": 4, "answer": "Harp", "points": 2 }
+  ]
+}

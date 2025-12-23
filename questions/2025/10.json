@@ -1,0 +1,10 @@
+{
+  "question": "Name something that comes in a 6-pack or 12-pack",
+  "answers": [
+    { "num": 1, "answer": "Soda", "points": 36 },
+    { "num": 2, "answer": "Beer", "points": 35 },
+    { "num": 3, "answer": "Eggs", "points": 9 },
+    { "num": 4, "answer": "Hot Dogs", "points": 4 },
+    { "num": 5, "answer": "Donuts", "points": 3 }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "question": "Name a chore nobody likes doing",
+  "answers": [
+    { "num": 1, "answer": "Cleaning the bathroom", "points": 45 },
+    { "num": 2, "answer": "Doing the dishes", "points": 25 },
+    { "num": 3, "answer": "Vacuuming", "points": 20 },
+    { "num": 4, "answer": "Laundry", "points": 10 }
+  ]
+}

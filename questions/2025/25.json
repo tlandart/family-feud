@@ -1,0 +1,9 @@
+{
+  "question": "What's a common excuse for being late to work?",
+  "answers": [
+    { "num": 1, "answer": "Overslept", "points": 52 },
+    { "num": 2, "answer": "Traffic", "points": 25 },
+    { "num": 3, "answer": "Car issues", "points": 17 },
+    { "num": 4, "answer": "Sick", "points": 6 }
+  ]
+}

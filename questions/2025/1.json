@@ -1,0 +1,9 @@
+{
+  "question": "Name something commonly associated with Chinese New Year",
+  "answers": [
+    { "num": 1, "answer": "Dragon/Lion", "points": 33 },
+    { "num": 2, "answer": "Red Envelopes", "points": 27 },
+    { "num": 3, "answer": "Fireworks/Firecrackers", "points": 26 },
+    { "num": 4, "answer": "Masks", "points": 13 }
+  ]
+}

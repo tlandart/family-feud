@@ -1,0 +1,9 @@
+{
+  "question": "Name an animal starting with E",
+  "answers": [
+    { "num": 1, "answer": "Elephant", "points": 85 },
+    { "num": 2, "answer": "Eagle", "points": 7 },
+    { "num": 3, "answer": "Eel", "points": 3 },
+    { "num": 4, "answer": "Emu", "points": 3 }
+  ]
+}

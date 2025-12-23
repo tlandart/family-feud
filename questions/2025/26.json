@@ -1,0 +1,11 @@
+{
+  "question": "What office item could someone use to get food out of their teeth?",
+  "answers": [
+    { "num": 1, "answer": "Paper clip", "points": 53 },
+    { "num": 2, "answer": "Paper/envelope", "points": 12 },
+    { "num": 3, "answer": "Pen/pencil", "points": 9 },
+    { "num": 4, "answer": "Staple", "points": 9 },
+    { "num": 5, "answer": "Letter opener", "points": 8 },
+    { "num": 6, "answer": "Tack/pin", "points": 6 }
+  ]
+}

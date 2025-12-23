@@ -1,0 +1,9 @@
+{
+  "question": "Name a ride that makes people throw up",
+  "answers": [
+    { "num": 1, "answer": "Roller Coaster", "points": 56 },
+    { "num": 2, "answer": "Boat/Ship", "points": 13 },
+    { "num": 3, "answer": "Car", "points": 10 },
+    { "num": 4, "answer": "Ferris Wheel", "points": 9 }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "question": "Name one of Santa's reindeer",
+  "answers": [
+    { "num": 1, "answer": "Rudolph", "points": 44 },
+    { "num": 2, "answer": "Dasher", "points": 24 },
+    { "num": 3, "answer": "Dancer", "points": 16 },
+    { "num": 4, "answer": "Prancer", "points": 9 },
+    { "num": 5, "answer": "Vixen", "points": 7 }
+  ]
+}

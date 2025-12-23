@@ -1,0 +1,9 @@
+{
+  "question": "Name something an athlete could break",
+  "answers": [
+    { "num": 1, "answer": "Bone/Body Part", "points": 80 },
+    { "num": 2, "answer": "Record", "points": 16 },
+    { "num": 3, "answer": "Bat/Equipment", "points": 2 },
+    { "num": 4, "answer": "Rules", "points": 2 }
+  ]
+}

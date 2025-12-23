@@ -1,0 +1,11 @@
+{
+  "question": "Name something you hang on a Christmas tree",
+  "answers": [
+    { "num": 1, "answer": "Ornaments", "points": 59 },
+    { "num": 2, "answer": "Lights", "points": 17 },
+    { "num": 3, "answer": "Star", "points": 8 },
+    { "num": 4, "answer": "Tinsel", "points": 6 },
+    { "num": 5, "answer": "Candy cane", "points": 3 },
+    { "num": 6, "answer": "Garland/wreath", "points": 2 }
+  ]
+}

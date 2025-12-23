@@ -1,0 +1,9 @@
+{
+  "question": "If you were to dress up as Santa, name one thing you would need",
+  "answers": [
+    { "num": 1, "answer": "Beard", "points": 39 },
+    { "num": 2, "answer": "Santa Hat", "points": 34 },
+    { "num": 3, "answer": "Santa Suit", "points": 20 },
+    { "num": 4, "answer": "Belly/Pillow", "points": 3 }
+  ]
+}

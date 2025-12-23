@@ -1,0 +1,10 @@
+{
+  "question": "Name something people say they never have enough of",
+  "answers": [
+    { "num": 1, "answer": "Money", "points": 39 },
+    { "num": 2, "answer": "Time", "points": 27 },
+    { "num": 3, "answer": "Sleep", "points": 17 },
+    { "num": 4, "answer": "Energy", "points": 10 },
+    { "num": 5, "answer": "Vacation days", "points": 7 }
+  ]
+}

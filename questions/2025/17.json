@@ -1,0 +1,9 @@
+{
+  "question": "Name something that has teeth",
+  "answers": [
+    { "num": 1, "answer": "Animals", "points": 66 },
+    { "num": 2, "answer": "People", "points": 19 },
+    { "num": 3, "answer": "A Comb", "points": 8 },
+    { "num": 4, "answer": "Zipper", "points": 4 }
+  ]
+}

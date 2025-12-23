@@ -1,0 +1,10 @@
+{
+  "question": "Name an animal without legs",
+  "answers": [
+    { "num": 1, "answer": "Snake", "points": 59 },
+    { "num": 2, "answer": "Fish/Eel/Shark", "points": 23 },
+    { "num": 3, "answer": "Whale", "points": 5 },
+    { "num": 4, "answer": "Seal/Sea Lion", "points": 4 },
+    { "num": 5, "answer": "Worm", "points": 2 }
+  ]
+}

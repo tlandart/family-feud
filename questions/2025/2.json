@@ -1,0 +1,10 @@
+{
+  "question": "Name something associated with China",
+  "answers": [
+    { "num": 1, "answer": "The Great Wall", "points": 31 },
+    { "num": 2, "answer": "Chinese Food", "points": 25 },
+    { "num": 3, "answer": "Rice", "points": 19 },
+    { "num": 4, "answer": "Pandas", "points": 14 },
+    { "num": 5, "answer": "Chinese New Year", "points": 11 }
+  ]
+}

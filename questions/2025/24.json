@@ -1,0 +1,9 @@
+{
+  "question": "Name something that people pump up",
+  "answers": [
+    { "num": 1, "answer": "A tire", "points": 48 },
+    { "num": 2, "answer": "A balloon", "points": 13 },
+    { "num": 3, "answer": "A ball", "points": 10 },
+    { "num": 4, "answer": "Muscles", "points": 8 }
+  ]
+}

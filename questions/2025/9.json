@@ -1,0 +1,9 @@
+{
+  "question": "Name something people forget when they leave the house",
+  "answers": [
+    { "num": 1, "answer": "Keys", "points": 50 },
+    { "num": 2, "answer": "Phone", "points": 25 },
+    { "num": 3, "answer": "Wallet", "points": 15 },
+    { "num": 4, "answer": "Sunglasses", "points": 10 }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "question": "Name a useful body part that starts with “L”",
+  "answers": [
+    { "num": 1, "answer": "Legs", "points": 77 },
+    { "num": 2, "answer": "Lips", "points": 12 },
+    { "num": 3, "answer": "Lungs", "points": 6 },
+    { "num": 4, "answer": "Liver", "points": 4 }
+  ]
+}
